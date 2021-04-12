@@ -40,7 +40,7 @@ INSTALLED_APPS = [
 
     # User defined apps
 
-    #'home.apps.HomeConfig',
+    'home.apps.HomeConfig',
 
 ]
 
