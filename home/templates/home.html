@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
+{% load staticfiles %}
 <head>
-    {% load staticfiles %}
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -20,7 +21,7 @@
 
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand"><font color="white">Connect with me</font></a>
+        <a class="navbar-brand"><font color="white" size="5">Connect with me</font></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,7 +30,7 @@
             <div class="navbar-nav ml-auto">
                 <a class="nav-item nav-link" href="https://github.com/iYashodhan">Git Hub</a>
                 <a class="nav-item nav-link" href="https://twitter.com/Yashxdhan">Twitter</a>
-                <a class="nav-item nav-link" href="https://instagram.com/yashxdhan">Instagram</a>
+                <a class="nav-item nav-link" href="https://instagram.com/yashxdhan">Email Me</a>
             </div>
         </div>
     </nav>
@@ -45,15 +46,13 @@
 
                 <div class="content">
                     <span>
-
-
                     <h1 class="jumbotron-heading">Hi, I am Yashodhan</h1>
                     <p class="lead text-muted">I am passionate about technology and have keen interest in Computer Science. As a self taught programmer I have the ability to solve problems, derive conclusions
                         and quickly learn, grasp new ideas.
                     </p>
                     <p>
                         <a href="https://www.linkedin.com/in/yashodhan-sharma" class="btn btn-primary my-2">LinkedIn</a>
-                        <a href="{ static 'Resume.pdf '}" class="btn btn-secondary my-2">Download Resume</a>
+                        <a href="{% static 'Resume.pdf'%}" class="btn btn-secondary my-2">Check Resume</a>
                     </p>
                         </span>
                 </div>
