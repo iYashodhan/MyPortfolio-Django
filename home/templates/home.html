@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Portfolio</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand"><font color="white">Connect with me</font></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="https://github.com/iYashodhan">Git Hub</a>
+                <a class="nav-item nav-link" href="https://twitter.com/Yashxdhan">Twitter</a>
+                <a class="nav-item nav-link" href="https://instagram.com/yashxdhan">Instagram</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container ml-auto">
+            <h1 class="jumbotron-heading">Hi, I am Yashodhan</h1>
+            <p class="lead text-muted">I am passionate about technology and have
+                keen interest in Computer Science. As a
+                self taught programmer I have the ability
+                to solve problems, derive conclusions
+                and quickly learn, grasp new ideas.
+            </p>
+            <p>
+                <a href="https://www.linkedin.com/in/yashodhan-sharma" class="btn btn-primary my-2">LinkedIn</a>
+                <a href="{ static 'Resume.pdf '}" class="btn btn-secondary my-2">Download Resume</a>
+            </p>
+            <p class="lead text-muted"><strong>Here are some of the projects I have worked on</strong>
+            </p>
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container ml-auto">
+            {%for project in projects %}
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top"
+                             src="{{ project.image_url }}"
+                             alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text" align="center"><b>Name of the project</b></p>
+                            <p class="card-text">{{project.summary}}</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="{{project.github_link}}" class="btn btn-sm btn-outline-secondary">View on
+                                        github</a>
+                                </div>
+                                <small class="text-muted">{{project.time_period}}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <section class="jumbotron text-center">
+        <p class="lead text-muted"><strong> <font size="+2">Crafted with love, Django and Bootstrap ❤.</font></strong>
+        </p>
+        <p>This website is &copy; Yashodhan Sharma. {% now "Y" %}
+        </p>
+    </section>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
